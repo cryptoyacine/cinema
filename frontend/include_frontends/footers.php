@@ -33,15 +33,10 @@
       <div class="col-lg-4 col-md-7">
         <!-- App promotion -->
         <div class="block-2 app-promotion">
-          <div class="mobile d-flex">
-            <a href="">
-              <!-- Icon -->
-              <img src="../../style/images/footer/phone-icon.png" alt="mobile-icon">
-            </a>
-            <p>Installer notre application Bibliothèque de Dugny (bientot Disponible)</p>
+          <iframe id="widget_autocomplete_preview"  width="300" height="150" frameborder="0" src="https://meteofrance.com/widget/prevision/930300##00000096"> </iframe>
           </div>
           <div class="download-btn d-flex my-3">
-            <img src="../../style/images/apps/google-play-store.png" class="img-fluid ml-3" alt="">
+
 
           </div>
         </div>
@@ -64,6 +59,8 @@
             </script>. All Rights Reserved, theme by <a class="text-primary" href="https://themefisher.com" target="_blank">themefisher.com</a></p>
         </div>
       </div>
+
+
       <div class="col-sm-6 col-12">
         <!-- Social Icons -->
         <ul class="social-media-icons text-right">

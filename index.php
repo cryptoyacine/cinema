@@ -32,15 +32,15 @@
 						<h2>Catégories Populaires</h2>
 						<ul class="list-inline">
 							<li class="list-inline-item">
-								<a href="frontend/view/recherche.php"><i class="fa fa-wheelchair-alt"></i> Action</a></li>
+								<a href="#"><i class="fa fa-wheelchair-alt"></i> Action</a></li>
 							<li class="list-inline-item">
-								<a href="frontend/view/recherche.php"><i class="fa fa-compass"></i> Aventure</a>
+								<a href="#"><i class="fa fa-compass"></i> Aventure</a>
 							</li>
 							<li class="list-inline-item">
-								<a href="frontend/view/recherche.php"><i class="fa fa-map-pin"></i> Mystère</a>
+								<a href="#"><i class="fa fa-map-pin"></i> Mystère</a>
 							</li>
 							<li class="list-inline-item">
-								<a href="frontend/view/recherche.php"><i class="fa fa-frown-o"></i> Drama</a>
+								<a href="#"><i class="fa fa-frown-o"></i> Drama</a>
 							</li>
 						</ul>
 					</div>
@@ -83,21 +83,21 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="frontend/view/singlepp.php">
-				<img class="card-img-top img-fluid" src="style/images/products/Le-Petit-Poucet.jpg" alt="Card image cap">
+			<a href="frontend/view/singleavenger.php">
+				<img class="card-img-top img-fluid" src="style/images/products/avenger.jpg" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singlepp.php">Le Petit Poucet</a></h4>
+		    <h4 class="card-title"><a href="frontend/view/singleavenger.php">avenger</a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="frontend/view/categorie.php"><i class="fa fa-folder-open-o"></i>Conte</a>
+		    		<a href="#"><i class="fa fa-folder-open-o"></i>COMBAT</a>
 		    	</li>
 		    	<li class="list-inline-item">
-		    		<a><i class="fa fa-calendar"></i>1697</a>
+		    		<a><i class="fa fa-calendar"></i>2018</a>
 		    	</li>
 		    </ul>
-		    <p class="card-text">Le Petit Poucet est un conte appartenant à la tradition orale, retranscrit et transformé par Charles Perrault en France et paru dans Les Contes de ma mère l'Oye</p>
+
         <div class="widget rate">
 
           <div class="starrr"></div>
@@ -115,21 +115,21 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="frontend/view/singlee.php">
-				<img class="card-img-top img-fluid" src="style/images/products/250px-Camus23.jpg" alt="Card image cap">
+			<a href="frontend/view/ironman.php">
+				<img class="card-img-top img-fluid" src="style/images/products/ironman.jpg" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singlee.php">L'étranger</a></h4>
+		    <h4 class="card-title"><a href="frontend/view/singlee.php">Iron man</a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="frontend/view/categorie.php"><i class="fa fa-folder-open-o"></i>Roman</a>
+		    		<a href="#"><i class="fa fa-folder-open-o"></i>science</a>
 		    	</li>
 		    	<li class="list-inline-item">
-		    		<a><i class="fa fa-calendar"></i>19 mai 1942</a>
+		    		<a><i class="fa fa-calendar"></i>2005</a>
 		    	</li>
 		    </ul>
-		    <p class="card-text">L'Étranger est le premier roman d’Albert Camus, paru en 1942.</p>
+
         <div class="widget rate">
 
           <div class="starrr"></div>
@@ -147,21 +147,21 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="frontend/view/singlerj.php">
-				<img class="card-img-top img-fluid" src="style/images/products/inddzdzex.jpg" alt="Card image cap">
+			<a href="frontend/view/flash.php">
+				<img class="card-img-top img-fluid" src="style/images/products/flash.jpg" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singlerj.php">Roméo et Juliette</a></h4>
+		    <h4 class="card-title"><a href="frontend/view/singleflash.php">The Flash</a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="frontend/view/categorie.php"><i class="fa fa-folder-open-o"></i>Tragédie</a>
+		    		<a href="frontend/view/singleflash.php"><i class="fa fa-folder-open-o"></i>action</a>
 		    	</li>
 		    	<li class="list-inline-item">
-		    		<a><i class="fa fa-calendar"></i>1597</a>
+		    		<a><i class="fa fa-calendar"></i>2014</a>
 		    	</li>
 		    </ul>
-		    <p class="card-text">Roméo et Juliette est une tragédie de William Shakespeare.</p>
+
         <div class="widget rate">
 
           <div class="starrr"></div>
@@ -179,21 +179,21 @@
 	<div class="card">
 		<div class="thumb-content">
 			<!-- <div class="price">$200</div> -->
-			<a href="frontend/view/singlepc.php">
-				<img class="card-img-top img-fluid" src="style/images/products/81ovTNILQfL.jpg" alt="Card image cap">
+			<a href="frontend/view/singlethorragnarok.php">
+				<img class="card-img-top img-fluid" src="style/images/products/thor-ragnarok.jpg" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singlepc.php">Le Petit Chaperon Rouge</a></h4>
+		    <h4 class="card-title"><a href="frontend/view/singlethorragnarok.php">thor ragnarok</a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="frontend/view/categorie.php"><i class="fa fa-folder-open-o"></i>Conte</a>
+		    		<a href="#"><i class="fa fa-folder-open-o"></i>Aventure</a>
 		    	</li>
 		    	<li class="list-inline-item">
-		    		<a ><i class="fa fa-calendar"></i>1697</a>
+		    		<a ><i class="fa fa-calendar"></i>2018</a>
 		    	</li>
 		    </ul>
-		    <p class="card-text">Le Petit Chaperon rouge est un conte de tradition orale d'origine française. </p>
+
         <div class="widget rate">
 
           <div class="starrr"></div>

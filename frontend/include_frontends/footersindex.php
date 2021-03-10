@@ -18,7 +18,7 @@
         <div class="block">
           <h4>Pages du site</h4>
           <ul>
-            
+
             <li><a href="frontend/view/categoriefilm.php">Categories film</a></li>
             <li><a href="frontend/view/about-us.php">A propos</a></li>
             <li><a href="frontend/view/contact-us.php">Contact</a></li>
@@ -33,21 +33,16 @@
       <div class="col-lg-4 col-md-7">
         <!-- App promotion -->
         <div class="block-2 app-promotion">
-          <div class="mobile d-flex">
-            <a href="">
-              <!-- Icon -->
-              <img src="style/images/footer/phone-icon.png" alt="mobile-icon">
-            </a>
-            <p>Installer notre application Bibliothèque de Dugny (bientot Disponible)</p>
+          <iframe id="widget_autocomplete_preview"  width="300" height="150" frameborder="0" src="https://meteofrance.com/widget/prevision/930300##00000096"> </iframe>
           </div>
           <div class="download-btn d-flex my-3">
-            <img src="style/images/apps/google-play-store.png" class="img-fluid ml-3" alt="">
 
           </div>
         </div>
-      </div>
+  </div></div>
     </div>
   </div>
+
   <!-- Container End -->
 </footer>
 <!-- Footer Bottom -->
