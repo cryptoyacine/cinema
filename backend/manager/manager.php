@@ -169,6 +169,8 @@ public function deconnexion()
       'mail' =>  $a->getMail(),
 ));
 
+$c = $this->mail($a);
+
 
 
 
@@ -220,7 +222,7 @@ public function mail($a){  //PHP MAILER
 
 
     public function modification($a)
-    {                                                    
+    {
       session_start();
 
 if($a->getTypemodif()=='changermail'){

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Demarrage session avec un test pour savoir si on est connecté -->
-<?php session_start(); ?>
+
   <?php include '../include_frontends/nav.php';  ?>
 <!-- contact us end -->
 

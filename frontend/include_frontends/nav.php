@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bibliothèque de Dugny</title>
+<title>cinema de Dugny</title>
+<?php session_start(); ?>
 <!-- include de php redondant -->
 <?php include '../include_frontends/styles.php';  ?>
 </head>
@@ -43,14 +44,14 @@
 						<?php } ?>
 						<li class="nav-item dropdown dropdown-slide">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">
-								Nos livres<span><i class="fa fa-angle-down"></i></span>
+								à l'affiche <span><i class="fa fa-angle-down"></i></span>
 							</a>
 
 							<!-- Dropdown list -->
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="categorieCD.php">Categorie CD</a>
-								<a class="dropdown-item" href="categoriefilm.php">Categorie Film</a>
-								<a class="dropdown-item" href="categorielivre.php">Categorie Livre</a>
+
+								<a class="dropdown-item" href="categoriefilm.php">Film</a>
+
 							</div>
 						</li>
 						<li class="nav-item dropdown dropdown-slide">
@@ -80,9 +81,9 @@
 													<div class="dropdown-menu">
 														<a class="dropdown-item" href="admin.php">Admin  </a>
 															<a class="dropdown-item" href="adminajout.php">Admin ajout  </a>
-															<a class="dropdown-item" href="adminajoutlivre.php">Admin ajout livre </a>
+
 															<a class="dropdown-item" href="adminajoutfilm.php">Admin ajout film </a>
-															<a class="dropdown-item" href="adminajoutcd.php">Admin ajout cd </a>
+															
 													</div>
 												</li>
 

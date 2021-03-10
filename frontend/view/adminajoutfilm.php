@@ -2,7 +2,7 @@
 <PHP lang="en">
 <head>
   <?php include '../include_frontends/nav.php';  ?>
-  <?php session_start();
+  <?php
 if (isset($_SESSION['role']) and $_SESSION['role'] == 1 ){
 
    ?>
@@ -88,8 +88,6 @@ CHOISIR AVENTURE :</>
 
 <?php include('../include_frontends/plugins.php'); ?>
     </body>
-<?php $_SESSION["erreurcase"] = ''; } else {
-  header("Location: 404.php");
-}?>
+<?php $_SESSION["erreurcase"] = ''; } ?>
 
 </PHP>

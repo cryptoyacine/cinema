@@ -32,14 +32,14 @@
               <?php } ?>
               <li class="nav-item dropdown dropdown-slide">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">
-                  Nos livres<span><i class="fa fa-angle-down"></i></span>
+                  à l'affiche <span><i class="fa fa-angle-down"></i></span>
 								</a>
 
 								<!-- Dropdown list -->
 								<div class="dropdown-menu">
-                  <a class="dropdown-item" href="frontend/view/categorieCD.php">Categorie CD</a>
-                  <a class="dropdown-item" href="frontend/view/categoriefilm.php">Categorie Film</a>
-                  <a class="dropdown-item" href="frontend/view/categorielivre.php">Categorie Livre</a>
+
+                  <a class="dropdown-item" href="frontend/view/categoriefilm.php"> Film</a>
+
 								</div>
 							</li>
 							<li class="nav-item dropdown dropdown-slide">
@@ -71,9 +71,9 @@
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="frontend/view/admin.php">Admin  </a>
                   <a class="dropdown-item" href="frontend/view/adminajout.php">Admin ajout  </a>
-                  <a class="dropdown-item" href="frontend/view/adminajoutlivre.php">Admin ajout livre </a>
+
                   <a class="dropdown-item" href="frontend/view/adminajoutfilm.php">Admin ajout film </a>
-                  <a class="dropdown-item" href="frontend/view/adminajoutcd.php">Admin ajout cd </a>
+
               </div>
             </li>
 

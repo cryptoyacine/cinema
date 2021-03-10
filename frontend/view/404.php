@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <!-- Demarrage session-->
-  <?php session_start(); ?>
+
   <?php include '../include_frontends/nav.php';  ?>
 
 <section class="section bg-gray">

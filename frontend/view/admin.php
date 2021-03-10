@@ -1,9 +1,10 @@
 <!DOCTYPE PHP>
 <PHP lang="fr">
 <head>
+  <?php include '../include_frontends/nav.php';  ?>
     <!-- Demarrage session avec un test pour savoir si on est connecté et si on est admin -->
 <?php
-session_start();
+
 
 
 
@@ -17,7 +18,7 @@ else {
    $_SESSION['stop']=1; header("Location: ../../backend/process/admin.php");
 }
 ?>
-<?php include '../include_frontends/nav.php';  ?>
+
 
 <section class="login py-5 border-top-1">
     <div class="container">

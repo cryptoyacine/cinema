@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <!-- Demarrage session-->
-  <?php session_start(); ?>
+
   <?php include '../include_frontends/nav.php';  ?>
-  
+
 <!--================================
 =            Page Title            =
 =================================-->

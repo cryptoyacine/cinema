@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Demarrage session -->
-<?php session_start();
+<?php include '../include_frontends/nav.php';
 
 if (isset($_SESSION['stop']) and  $_SESSION['stop'] ==4) {    $res=$_SESSION["film"];   }
 
 else {
    $_SESSION['stop']=4; header("Location: ../../backend/process/affichertoutfilm.php");
 } ?>
-<?php include '../include_frontends/nav.php';  ?>
+
 
 
 <!--===================================
@@ -25,21 +25,7 @@ else {
 			<div class="col-md-12">
 				<!-- Client Slider -->
 <div class="category-slider">
-    <!-- Client 01 -->
-    <div class="item">
-        <a href="categorieCD.php">
-            <!-- Slider Image -->
-            <i class="fa fa-video-camera" ></i>
-            <h4>CD</h4>
-        </a>
-    </div>
-    <div class="item">
-        <a href="categorielivre.php">
-            <!-- Slider Image -->
-            <i class="fa fa-book"></i>
-            <h4>Livre</h4>
-        </a>
-    </div>
+  
     <div class="item">
         <a href="#" onclick="event.preventDefault();" class="text-info">
             <!-- Slider Image -->

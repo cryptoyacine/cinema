@@ -18,8 +18,8 @@
         <div class="block">
           <h4>Pages du site</h4>
           <ul>
-            <li><a href="frontend/view/recherche.php">Recherche</a></li>
-            <li><a href="frontend/view/categorie.php">Categories</a></li>
+            
+            <li><a href="frontend/view/categoriefilm.php">Categories film</a></li>
             <li><a href="frontend/view/about-us.php">A propos</a></li>
             <li><a href="frontend/view/contact-us.php">Contact</a></li>
           </ul>

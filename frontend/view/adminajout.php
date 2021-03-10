@@ -1,7 +1,7 @@
 <!DOCTYPE PHP>
 <PHP lang="fr">
     <?php include '../include_frontends/nav.php';  ?>
-    <?php session_start();
+    <?php
   if (isset($_SESSION['role']) and $_SESSION['role'] == 1 ){
 
      ?>
