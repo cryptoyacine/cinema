@@ -101,8 +101,13 @@
 
 						<li class="nav-item">
 							<a class="nav-link login-button" href="login.php">Connection</a>
+
+
 						</li>
 
+						<li class="nav-item">
+							<a class="nav-link login-button" href="register.php">Inscription</a>
+						</li>
 					 <!--  <li class="nav-item">
 							<a class="nav-link login-button" href="user-profile.php"><i class="fa fa-plus-circle"></i> Mon compte</a>
 						</li>-->

@@ -3,7 +3,7 @@
 <head>
 
   <?php include '../include_frontends/nav.php';  ?>
-  
+
 <section class="login py-5 border-top-1">
         <div class="container">
             <div class="row justify-content-center">
