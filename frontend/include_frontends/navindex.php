@@ -87,7 +87,7 @@
       <a class="nav-link login-button" href="backend/process/deconnexion.php">Deconnexion</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-white add-button" href="frontend/view/reservation.php"><i class="fa fa-plus-circle"></i> Ajouter au panier </a>
+      <a class="nav-link text-white add-button" href="frontend/view/reservation.php"> Mes reservations </a>
     </li>
   <?php }  else {  ?>
 

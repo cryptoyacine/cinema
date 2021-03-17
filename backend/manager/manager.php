@@ -583,9 +583,9 @@ else {
         $this->dbh = new bdd();
 
 
-      $req = $this->dbh->getBase()->prepare("SELECT * FROM film");
+      $req = $this->dbh->getBase()->prepare("SELECT * FROM salle");
         $req->execute(array(
-          'filmnom' => $a->getFilmnom(),
+      
 
         ));
 

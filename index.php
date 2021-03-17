@@ -2,7 +2,7 @@
 <php lang="en">
 <head>
   <!-- Demarrage session -->
-<?php session_start(); ?>
+<?php session_start(); $_SESSION['stop'] =0; ?>
   <!-- SITE TITTLE -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

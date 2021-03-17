@@ -29,7 +29,7 @@
 							<a class="nav-link" href="../../index.php">Accueil</a>
 						</li>
 							<!--  test pour savoir si on est connecté -->
-							<?php if (isset($_SESSION["id"])){   ?>
+							<?php if (isset($_SESSION["id"])){    ?>
 						<li class="nav-item dropdown dropdown-slide">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">
 								Profile<span><i class="fa fa-angle-down"></i></span>
@@ -83,7 +83,7 @@
 															<a class="dropdown-item" href="adminajout.php">Admin ajout  </a>
 
 															<a class="dropdown-item" href="adminajoutfilm.php">Admin ajout film </a>
-															
+
 													</div>
 												</li>
 
@@ -96,7 +96,7 @@
 								 <a class="nav-link login-button" href="../../backend/process/deconnexion.php">Deconnexion</a>
 							 </li>
 							 <li class="nav-item">
-								<a class="nav-link text-white add-button" href="reservation.php"><i class="fa fa-plus-circle"></i> Ajouter au panier </a>
+								<a class="nav-link text-white add-button" href="reservation.php">Mes reservations </a>
 							</li>
 						 <?php }  else {  ?>
 

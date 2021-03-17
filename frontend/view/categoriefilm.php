@@ -7,8 +7,11 @@
 if (isset($_SESSION['stop']) and  $_SESSION['stop'] ==4) {    $res=$_SESSION["film"];   }
 
 else {
-   $_SESSION['stop']=4; header("Location: ../../backend/process/affichertoutfilm.php");
-} ?>
+   $_SESSION['stop']=4;?>
+   <script type="text/javascript">
+     window.location.href =   "../../backend/process/affichertoutfilm.php";
+   </script>
+<?php  } ?>
 
 
 
@@ -71,7 +74,7 @@ else {
             ?>
     						<div class="col-md-3 col-sm-6">
     							<ul class="store-list">
-    								<li> <?php echo $value['FilmNom'];?> </li>
+    								<li> 	<a href="<?php echo $value['lienfilm'];?>"> <?php echo $value['SALLENomfilm'];?> </a> </li>
 
     							</ul>
     						</div>
