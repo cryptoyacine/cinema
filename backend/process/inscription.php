@@ -26,7 +26,7 @@ try {
                                    //INSTANCIER
 
     $man->inscription($user);
-    //$man->mail($user);                    //Iutilise la method Inscription
+
 
 } catch (Exception $e) {
   $_SESSION["erreurcase"] = $e->getMessage();
@@ -44,7 +44,7 @@ if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] !='') {
 
 else {
 
-  
+  header("Location: ../../frontend/view/login.php");
 }
 
 

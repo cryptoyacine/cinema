@@ -12,11 +12,12 @@
                         <h3 class="bg-gray p-4">Inscription</h3>
                         <form action="../../backend/process/inscription.php" method= "post">
                             <fieldset class="p-4">
-
+<?php  if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "util"){echo '<p><font color="red">Utilisateur deja existant</font></p>';}?>
                               <input type="text" name="nom"
                               <?php
 
                               if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevide"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
+
                                 if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevidesaufpassword"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
                                 if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevidesaufprenom"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
                                   if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevidesaufusername"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}

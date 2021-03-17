@@ -152,15 +152,16 @@ public function deconnexion()
 
 
     $this->dbh = new bdd();
-    $req = $this->dbh->getBase()->prepare("SELECT * from utilisateur where username=:username ");
+    $req = $this->dbh->getBase()->prepare("SELECT * from utilisateur where username=:username or mail = :mail ");
     $req->execute(array(
       'username'=> $a->getUsername(),
+      'mail'=>$a->getMail(),
       ));
-      var_dump($a);
+
       $res = $req->fetch();
 
       if ($res) {
-        throw new Exception("Error utilisateur deja existant");
+        throw new Exception("util");
 
       }
 
@@ -197,24 +198,24 @@ public function mail($a){  //PHP MAILER
       $mail->isSMTP();                                            // Send using SMTP
       $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-      $mail->Username   = 'jeremie.lelong77@gmail.com';                     // SMTP username
-      $mail->Password   = 'gigajl77230';                               // SMTP password
+      $mail->Username   = 'phpmailerdugny@gmail.com';                     // SMTP username
+      $mail->Password   = 'Mailer1234';                               // SMTP password
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; PHPMailer::ENCRYPTION_SMTPS encouraged
       $mail->Port       = 465;                                    // TCP port to connect to, use 465 for PHPMailer::ENCRYPTION_SMTPS above
 
       //Recipients
-      $mail->setFrom('jlelong@lprs.fr', 'jlelong');
+      $mail->setFrom('phpmailerdugny@gmail.com', 'NE PAS REPONDRE');
       $mail->addAddress( $a->getMail() , $a->getNom());     // Add a recipient
-      $mail->addReplyTo('jeremie.lelong77@gmail.com', 'jlelong');
+      $mail->addReplyTo('phpmailerdugny@gmail.com', 'NE PAS REPONDRE');
       // Attachments
     //  $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
       //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
       // Content
-      $mail->isHTML(true);                                  // Set email format to HTML
+      //$mail->isHTML(true);                                  // Set email format to HTML
       $mail->Subject = 'Bienvenue ! ';
-       $mail->Body    = 'Bienvenue sur le site de la Bibliotheque de <b>Dugny!</b>';
-       $mail->AltBody = 'Bienvenue sur le site de la Bibliotheque de Dugny!';
+       $mail->Body    = 'Bienvenue sur le site du Cinema de <b>Dugny!</b>';
+       $mail->AltBody = 'Bienvenue sur le site du Cinema de Dugny!';
 
       $mail->send();
       echo 'Message has been sent';
