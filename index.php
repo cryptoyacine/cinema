@@ -82,7 +82,7 @@
 <div class="product-item bg-light">
 	<div class="card">
 		<div class="thumb-content">
-			<!-- <div class="price">$200</div> -->
+			<div class="price">Salle 4</div>
 			<a href="frontend/view/singleavenger.php">
 				<img class="card-img-top img-fluid" src="style/images/products/avenger.jpg" alt="Card image cap">
 			</a>
@@ -98,10 +98,7 @@
 		    	</li>
 		    </ul>
 
-        <div class="widget rate">
 
-          <div class="starrr"></div>
-        </div>
 		</div>
 	</div>
 </div>
@@ -114,13 +111,13 @@
 <div class="product-item bg-light">
 	<div class="card">
 		<div class="thumb-content">
-			<!-- <div class="price">$200</div> -->
-			<a href="frontend/view/ironman.php">
+		<div class="price">Salle 3</div>
+			<a href="frontend/view/singleironman.php">
 				<img class="card-img-top img-fluid" src="style/images/products/ironman.jpg" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singlee.php">Iron man</a></h4>
+		    <h4 class="card-title"><a href="frontend/view/singleironman.php">Iron man</a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
 		    		<a href="#"><i class="fa fa-folder-open-o"></i>science</a>
@@ -130,10 +127,7 @@
 		    	</li>
 		    </ul>
 
-        <div class="widget rate">
 
-          <div class="starrr"></div>
-        </div>
 		</div>
 	</div>
 </div>
@@ -146,8 +140,8 @@
 <div class="product-item bg-light">
 	<div class="card">
 		<div class="thumb-content">
-			<!-- <div class="price">$200</div> -->
-			<a href="frontend/view/flash.php">
+			<div class="price">Salle 2</div>
+			<a href="frontend/view/singleflash.php">
 				<img class="card-img-top img-fluid" src="style/images/products/flash.jpg" alt="Card image cap">
 			</a>
 		</div>
@@ -162,10 +156,7 @@
 		    	</li>
 		    </ul>
 
-        <div class="widget rate">
 
-          <div class="starrr"></div>
-        </div>
 		</div>
 	</div>
 </div>
@@ -178,7 +169,7 @@
 <div class="product-item bg-light">
 	<div class="card">
 		<div class="thumb-content">
-			<!-- <div class="price">$200</div> -->
+		 <div class="price">Salle 1</div>
 			<a href="frontend/view/singlethorragnarok.php">
 				<img class="card-img-top img-fluid" src="style/images/products/thor-ragnarok.jpg" alt="Card image cap">
 			</a>
@@ -187,17 +178,14 @@
 		    <h4 class="card-title"><a href="frontend/view/singlethorragnarok.php">thor ragnarok</a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="#"><i class="fa fa-folder-open-o"></i>Aventure</a>
+		    		<a href="#"><i class="fa fa-folder-open-o"></i>Action</a>
 		    	</li>
 		    	<li class="list-inline-item">
-		    		<a ><i class="fa fa-calendar"></i>2018</a>
+		    		<a ><i class="fa fa-calendar"></i>2017</a>
 		    	</li>
 		    </ul>
 
-        <div class="widget rate">
 
-          <div class="starrr"></div>
-        </div>
 		</div>
 	</div>
 </div>

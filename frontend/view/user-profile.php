@@ -3,11 +3,11 @@
 <head>
 
   <!-- Demarrage session avec un test pour savoir si on est connecté -->
-  <?php  session_start(); if (isset($_SESSION["id"]) ) {
+  <?php include '../include_frontends/nav.php';  if (isset($_SESSION["id"]) ) {
 
    ?>
 
-  <?php include '../include_frontends/nav.php';  ?>
+  
 <!--==================================
 =            User Profile            =
 ===================================-->

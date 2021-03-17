@@ -4,7 +4,7 @@
     <!-- Demarrage session avec un test pour savoir si on est connecté -->
 <?php
 
-session_start();
+
 
 if (isset($_SESSION['id'])) {
   header("Location: 404.php ");
@@ -28,16 +28,16 @@ else{
 
                             <input type="text" name="username"
                             <?php
-                            if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevide" or  isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "erreur" ){ echo'placeholder="Veuillez rentrer un nom d\'utilisateur valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
+                            if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevide" ){ echo'placeholder="Veuillez rentrer un nom d\'utilisateur valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
                             if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "uservide") { echo'placeholder="Veuillez rentrer un nom d\'utilisateur valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
-                            else { echo 'placeholder="Utilisateur" class="border p-3 w-100 my-2" />';} ?>
+                            else { echo 'placeholder="Utilisateur" class="border p-3 w-100 my-2" ';} ?> />
                             <input type="password" name="password"
                             <?php
-                            if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevide" or isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"]){ echo'placeholder="Veuillez rentrer un mot de passe valide*"'  ; echo 'class="form-controlred p-3 w-100 my-2"';}
-                            if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "passwordvide") { echo'placeholder="Veuillez rentrer un mot de passe valide*"'; echo 'class="form-controlred p-3 w-100 my-2"';;}
+                            if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevide"  ){ echo'placeholder="Veuillez rentrer un mot de passe valide*"'  ; echo 'class="form-controlred p-3 w-100 my-2"';}
+                            if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "passwordvide") { echo'placeholder="Veuillez rentrer un mot de passe valide*"'; echo 'class="form-controlred p-3 w-100 my-2"';}
                             else {
-                              echo 'placeholder="Mot de passe" class="form-control p-3 w-100 my-2" />';}
-                              ?>
+                              echo 'placeholder="Mot de passe" class="form-control p-3 w-100 my-2"';}
+                              ?>/>
 
 
 

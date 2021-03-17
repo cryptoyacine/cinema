@@ -25,7 +25,7 @@ else {
 			<div class="col-md-12">
 				<!-- Client Slider -->
 <div class="category-slider">
-  
+
     <div class="item">
         <a href="#" onclick="event.preventDefault();" class="text-info">
             <!-- Slider Image -->

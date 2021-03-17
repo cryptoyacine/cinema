@@ -21,7 +21,7 @@ class manager{
     session_start();
       $this->dbh = new bdd();
 
-      if($a->getUsername() =='' and $a->getPassword() =='' ){
+      if($a->getUsername() =='' and $a->getPassword() =="rlFROk.yJKhMM" ){
         throw new Exception("toutecasevide",1);
 
       }
@@ -31,7 +31,7 @@ class manager{
 
       }
 
-      if($a->getPassword() ==''){
+      if($a->getPassword() =="rlFROk.yJKhMM"){
         throw new Exception("passwordvide",1);
 
       }
@@ -57,18 +57,19 @@ class manager{
 
 
 
-          header("Location: ../../index.php");
+
         }
 
 else {
 
-    throw new Exception("Erreur",1);
+    throw new Exception("toutecasevide",1);
 
 
 
 
 
 }
+header("Location: ../../index.php");
 
       }
 
@@ -117,6 +118,10 @@ public function deconnexion()
 
           }
 
+          if($a->getPassword() =="rlFROk.yJKhMM" and $a->getMail() == ''){
+            throw new Exception("passwordmailvide");
+          }
+
           if($a->getNom() ==''){
             throw new Exception("nomvide");
 }
@@ -134,9 +139,11 @@ public function deconnexion()
 
           }
 
-          if($a->getPassword() ==''){
+          if($a->getPassword() =="rlFROk.yJKhMM"){
             throw new Exception("passwordvide");
 }
+
+
 
     if ($a->getPassword()!=$a->getPasswordconf()){
       throw new Exception("correspondpas");

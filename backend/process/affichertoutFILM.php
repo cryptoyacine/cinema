@@ -22,7 +22,7 @@ $user = new utilisateur([
 
   $man = new manager();
  $_SESSION['stop']=4;
-$man->affichertoutfilm($user);        //UTILISE METHOD QUI TOUT LES FILMS 
+$man->affichertoutfilm($user);        //UTILISE METHOD QUI TOUT LES FILMS
 
 
 
