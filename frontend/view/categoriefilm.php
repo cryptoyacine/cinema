@@ -74,7 +74,7 @@ else {
             ?>
     						<div class="col-md-3 col-sm-6">
     							<ul class="store-list">
-    								<li> 	<a href="<?php echo $value['lienfilm'];?>"> <?php echo $value['SALLENomfilm'];?> </a> </li>
+    								<li> 	<a href="<?php echo $value['lienfilm'];?>"> <?php echo $value['SALLENomfilm'];?> </a>Numéro de la salle :  <?php echo $value['salleid'];?>  </li>
 
     							</ul>
     						</div>
@@ -100,53 +100,7 @@ else {
     				</div>
 
     				<!-- Second Letter -->
-    				<div class="block">
-    					<!-- Store First Letter -->
-    					<h5 class="store-letter">film recherche</h5>
-    					<hr>
-    					<!-- Store Lists -->
-    					<div class="row">
-    						<!-- Store List 01 -->
-                <?php
 
-    if (isset($_SESSION["recherchefilm"]) and $_SESSION["recherchefilm"]!='') {
-
-    $rer =  $_SESSION["recherchefilm"];
-
-
-
-
-
-                foreach ( $rer as $value) {
-
-
-
-
-
-            ?>
-    						<div class="col-md-3 col-sm-6">
-    							<ul class="store-list">
-    								<li> <?php echo $value['FilmNom']; ?> </li>
-
-    							</ul>
-    						</div>
-              <?php } ?>
-    </br>
-                  <form action="../../backend/process/afficherfilm.php" method= "post">
-                    <input type="text" name="FilmNom" value=""/>
-                  </br>  </br>
-                  <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">chercher</button> </form>
-    <?php } else {
-
-    ?>
-  </br>
-    <form action="../../backend/process/afficherfilm.php" method= "post">
-      <input type="text" name="FilmNom" value="">
-        </br>  </br>
-      <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">chercher</button>
-    </form>
-
-    <?php } ?>
 
     						</div>
     					</div>
@@ -155,7 +109,7 @@ else {
     			</div>
     		</div>
     	</div>
-    </section>n
+    </section>
 
 
 
