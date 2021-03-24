@@ -2,7 +2,7 @@
 <php lang="en">
 <head>
   <!-- Demarrage session -->
-<?php session_start(); $_SESSION['stop'] =0; ?>
+<?php session_start() ?>
   <!-- SITE TITTLE -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,14 @@
   <?php include 'frontend/include_frontends/stylesindex.php';  ?>
 </head>
 
-  <?php include 'frontend/include_frontends/navindex.php';  ?>
+  <?php include 'frontend/include_frontends/navindex.php';  if (isset($_SESSION['stop']) and  $_SESSION['stop'] ==4) {    $res=$_SESSION["film"];   }
+
+  else {
+     $_SESSION['stop']=4;?>
+     <script type="text/javascript">
+       window.location.href =   "backend/process/affichertoutfilmindex.php";
+     </script>
+  <?php  } ?>
 
 
 <!--===============================
@@ -77,122 +84,49 @@
 			<!-- offer 01 -->
 			<div class="col-lg-12">
 				<div class="trending-ads-slide">
+
+						<!-- product card -->
+
+<?php foreach ( $res as $value) {
+
+
+
+
+
+?>
+
+
 					<div class="col-sm-12 col-lg-4">
 						<!-- product card -->
 <div class="product-item bg-light">
 	<div class="card">
 		<div class="thumb-content">
-			<div class="price">Salle 4</div>
-			<a href="frontend/view/singleavenger.php">
-				<img class="card-img-top img-fluid" src="style/images/products/avenger.jpg" alt="Card image cap">
-			</a>
-		</div>
-		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singleavenger.php">avenger</a></h4>
-		    <ul class="list-inline product-meta">
-		    	<li class="list-inline-item">
-		    		<a href="#"><i class="fa fa-folder-open-o"></i>COMBAT</a>
-		    	</li>
-		    	<li class="list-inline-item">
-		    		<a><i class="fa fa-calendar"></i>2018</a>
-		    	</li>
-		    </ul>
-
-
-		</div>
-	</div>
-</div>
-
-
-
-					</div>
-					<div class="col-sm-12 col-lg-4">
-						<!-- product card -->
-<div class="product-item bg-light">
-	<div class="card">
-		<div class="thumb-content">
-		<div class="price">Salle 3</div>
+		<div class="price"><?php echo  $value["salleid"] ;?></div>
 			<a href="frontend/view/singleironman.php">
-				<img class="card-img-top img-fluid" src="style/images/products/ironman.jpg" alt="Card image cap">
+				<img class="card-img-top img-fluid" src="<?php echo $value['image']; ?>" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singleironman.php">Iron man</a></h4>
+		    <h4 class="card-title"><a href="style/images/products/flash.jpg"><?php echo $value["SALLENomfilm"] ;?></a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="#"><i class="fa fa-folder-open-o"></i>science</a>
+		    		<a href="#"><i class="fa fa-folder-open-o"></i><?php echo $value["theme"] ;?></a>
 		    	</li>
 		    	<li class="list-inline-item">
-		    		<a><i class="fa fa-calendar"></i>2005</a>
+		    		<a><i class="fa fa-calendar"></i></a>
 		    	</li>
 		    </ul>
 
 
 		</div>
 	</div>
-</div>
-
-
-
-					</div>
-					<div class="col-sm-12 col-lg-4">
-						<!-- product card -->
-<div class="product-item bg-light">
-	<div class="card">
-		<div class="thumb-content">
-			<div class="price">Salle 2</div>
-			<a href="frontend/view/singleflash.php">
-				<img class="card-img-top img-fluid" src="style/images/products/flash.jpg" alt="Card image cap">
-			</a>
-		</div>
-		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singleflash.php">The Flash</a></h4>
-		    <ul class="list-inline product-meta">
-		    	<li class="list-inline-item">
-		    		<a href="frontend/view/singleflash.php"><i class="fa fa-folder-open-o"></i>action</a>
-		    	</li>
-		    	<li class="list-inline-item">
-		    		<a><i class="fa fa-calendar"></i>2014</a>
-		    	</li>
-		    </ul>
-
-
-		</div>
-	</div>
-</div>
-
+</div> </div>
+<?php }?>
 
 
 					</div>
-					<div class="col-sm-12 col-lg-4">
-						<!-- product card -->
-<div class="product-item bg-light">
-	<div class="card">
-		<div class="thumb-content">
-		 <div class="price">Salle 1</div>
-			<a href="frontend/view/singlethorragnarok.php">
-				<img class="card-img-top img-fluid" src="style/images/products/thor-ragnarok.jpg" alt="Card image cap">
-			</a>
-		</div>
-		<div class="card-body">
-		    <h4 class="card-title"><a href="frontend/view/singlethorragnarok.php">thor ragnarok</a></h4>
-		    <ul class="list-inline product-meta">
-		    	<li class="list-inline-item">
-		    		<a href="#"><i class="fa fa-folder-open-o"></i>Action</a>
-		    	</li>
-		    	<li class="list-inline-item">
-		    		<a ><i class="fa fa-calendar"></i>2017</a>
-		    	</li>
-		    </ul>
 
 
-		</div>
-	</div>
-</div>
-
-
-
-					</div>
 				</div>
 			</div>
 
