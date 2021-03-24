@@ -102,12 +102,12 @@
 	<div class="card">
 		<div class="thumb-content">
 		<div class="price"><?php echo  $value["salleid"] ;?></div>
-			<a href="frontend/view/singleironman.php">
+			<a href="<?php echo $value['lienfilm']; ?>">
 				<img class="card-img-top img-fluid" src="<?php echo $value['image']; ?>" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="style/images/products/flash.jpg"><?php echo $value["SALLENomfilm"] ;?></a></h4>
+		    <h4 class="card-title"><a href="<?php echo $value['lienfilm']; ?>"><?php echo $value["SALLENomfilm"] ;?></a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
 		    		<a href="#"><i class="fa fa-folder-open-o"></i><?php echo $value["theme"] ;?></a>
