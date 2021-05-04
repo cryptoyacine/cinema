@@ -51,7 +51,8 @@
 							<div class="dropdown-menu">
 
 								<a class="dropdown-item" href="categoriefilm.php">Film</a>
-								<a class="dropdown-item" href="reservationfilm.php">reservation Film</a>
+								<?php if (isset($_SESSION["id"])){   ?>
+							<a class="dropdown-item" href="reservationfilm.php">reservation Film</a>   <?php }?>
 
 							</div>
 						</li>

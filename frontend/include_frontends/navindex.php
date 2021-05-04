@@ -39,7 +39,8 @@
 								<div class="dropdown-menu">
 
                   <a class="dropdown-item" href="frontend/view/categoriefilm.php"> Film</a>
-									<a class="dropdown-item" href="frontend/view/reservationfilm.php">reservation Film</a>
+									  <?php if (isset($_SESSION["id"])){   ?>
+									<a class="dropdown-item" href="frontend/view/reservationfilm.php">reservation Film</a>   <?php }  ?>
 
 								</div>
 							</li>
