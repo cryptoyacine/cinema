@@ -51,14 +51,7 @@
                 </div>
 
   </div>
-            <div class="col-lg-6 col-sm-9">
-                <div class="card my-3 my-lg-0">
-                     <img class="card-img-top" src="../../style/images/user/596-5961334_kono-dio-da-meme-template-hd-png-download.png" class="img-fluid w-100" alt="Card image cap">
-                    <div class="card-body bg-gray text-center">
-                      <h5 class="card-title">Jérémie LELONG</h5>
-                      <p class="card-text">FONDATEUR/PDG</p>
-                    </div>
-                </div>
+            
             </div>
             <div class="col-lg-6 col-sm-9">
                 <div class="card my-3 my-lg-0">

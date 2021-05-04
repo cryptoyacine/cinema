@@ -3,7 +3,7 @@
   <head>
     <?php include '../include_frontends/nav.php';  ?>
     <?php
-    if (isset($_SESSION['role']) and $_SESSION['role'] == 1 ){
+    if (isset($_SESSION['role'])){
 
       ?>
       <section class="login py-5 border-top-1">
