@@ -74,7 +74,7 @@ throw new Exception("toutecasevide",1);
 
 }
 
-public function paiement($a) //AJOUTER UN FILM EN TANT QU'ADMIN
+public function paiement($a) //Ajouter la reservation a la base de donnée
 {
 session_start();
 
@@ -1199,7 +1199,7 @@ $_SESSION["connect"] ="3";
 
 
 
-              public function affichertoutreservation($a){ //POUR AFFICHER tout les films
+              public function affichertoutreservation($a){ //POUR AFFICHER toutes les reservations
                             session_start();
                             $_SESSION['stop'] = 6;
                             $this->dbh = new bdd();
