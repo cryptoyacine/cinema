@@ -1194,11 +1194,50 @@ $_SESSION["connect"] ="3";
 
                 }
 
+
               }
 
 
 
+              public function affichertoutreservation($a){ //POUR AFFICHER tout les films
+                            session_start();
+                            $_SESSION['stop'] = 6;
+                            $this->dbh = new bdd();
 
+
+                            $req = $this->dbh->getBase()->prepare("SELECT * FROM reservation INNER JOIN salle ON salle.salleid = reservation.idsalle where utilisateurid = :id");
+                            $req->execute(array(
+
+                              "id"=>$a->getId(),
+
+
+                            ));
+
+                            $res = $req->fetchall();
+
+
+
+                            if ($res) {
+
+                            $_SESSION['reservation'] = $res;
+
+
+
+
+                            }
+
+                            else {
+
+                            throw new Exception("Erreur dans select res",1);
+
+
+
+
+
+                            }
+
+
+                            }
 
 
 }

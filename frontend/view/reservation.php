@@ -2,7 +2,19 @@
 <html lang="en">
 <head>
     <!-- Demarrage session -->
-    <?php include '../include_frontends/nav.php';  if (isset($_SESSION["id"]) ) {
+    <?php include '../include_frontends/nav.php';  if (isset($_SESSION["id"]) ) {   if (isset($_SESSION['stop']) and  $_SESSION['stop'] ==6 ) {
+    $res=$_SESSION["reservation"];
+    }
+
+      else {
+        ?>
+         <script type="text/javascript">
+           window.location.href =   "../../backend/process/affichertoutreservation.php";
+         </script>
+    <?php }
+
+
+
 
      ?>
 <!--==================================
@@ -69,10 +81,18 @@
 
 				</div>
 			</div>
+
+
+
 			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0">
+
+
 				<!-- Recently Favorited -->
+
 				<div class="widget dashboard-container my-adslist">
+
 					<h3 class="widget-header">Mes livres</h3>
+
 					<table class="table table-responsive product-dashboard-table">
 						<thead>
 							<tr>
@@ -81,49 +101,37 @@
 								<th class="text-center">Categorie</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
-								<td class="product-thumb">
-									<img width="80px" height="auto" src="../../style/images/products/81ovTNILQfL.jpg" alt="image description"></td>
-								<td class="product-details">
-									<h3 class="title">Petit Chaperon Rouge</h3>
-									<span class="add-id"><strong>ID:</strong> ng3D5hAMHPajQrM</span>
-									<span><strong>Acheter le: </strong><time>27 juin, 2017</time> </span>
-									<span class="status active"><strong>Statue:</strong>Emprunté</span>
-								</td>
-								<td class="product-category"><span class="categories">Livre</span></td>
+            <?php  if (isset($res)) {
+            foreach ($res as $value) {
 
-							</tr>
-							<tr>
+                         ?>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-thumb">
+                                                <img width="80px" height="auto" src="../../<?php echo $value['image']; ?>" alt="image description"></td>
+                                            <td class="product-details">
+                                                <h3 class="title"><?php echo $value['SALLENomfilm']; ?> </h3>
+                                                <span class="add-id"><strong>ID:</strong> <?php echo $value['salleid']; ?></span>
 
+                                                <span class="status active"><strong>Statue:</strong>Réservé ✔️  </span>
+                                            </td>
+                                            <?php if ($value['3D'] == 1) {  ?>
+                                            <td class="product-category"><span class="categoriefilm"> 3D : ✔️ </span></td>
+                                        <?php     } ?>
+                                      <?php  if ($value['3D'] != 1) { ?>
+                                        <td class="product-category"><span class="categoriefilm">3D : ❌ </span></td>
+                                    <?php     } ?>
+
+            <?php }} ?>
+                                </tr>
+                                <tr>
 
 						</tbody>
 					</table>
 
 				</div>
 
-				<!-- pagination -->
-				<div class="pagination justify-content-center">
-					<nav aria-label="Page navigation example">
-						<ul class="pagination">
-							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Previous">
-									<span aria-hidden="true">&laquo;</span>
-									<span class="sr-only">Previous</span>
-								</a>
-							</li>
-							<li class="page-item active"><a class="page-link" href="#">1</a></li>
 
-							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Next">
-									<span aria-hidden="true">&raquo;</span>
-									<span class="sr-only">Next</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<!-- pagination -->
 
 			</div>
 		</div>
@@ -144,7 +152,7 @@
 </footer>
 <?php include('../include_frontends/plugins.php'); ?>
 </body>
-<?php }   else {  $_SESSION["erreurcase"] = '';
+<?php }   else {  $_SESSION["stop"] = 0;
 header("Location: 404.php ");}?>
 
 </php>
