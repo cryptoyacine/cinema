@@ -22,7 +22,7 @@ $user = new utilisateur([
 
   $man = new manager();
 
-$man->affichertoutreservation($user);        //UTILISE METHOD QUI affiche les reservation d'un utilisateur
+$man->affichertoutreservation($user);        //UTILISE METHOD QUI affiche les reservation d'un utilisa
 
 
 
