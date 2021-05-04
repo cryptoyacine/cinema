@@ -114,7 +114,9 @@
                                                 <span class="add-id"><strong>ID:</strong> <?php echo $value['salleid']; ?></span>
 
                                                 <span class="status active"><strong>Statue:</strong>Réservé ✔️  </span>
-                                            </td>
+                                                  <span class="add-id"><strong>Place réservé : </strong><?php echo $value['RESnombre']; ?> </span>
+                                                    <span class="add-id"><strong>Prix payén: </strong><?php echo $value['REStarif']; ?> € </span>
+</td>
                                             <?php if ($value['3D'] == 1) {  ?>
                                             <td class="product-category"><span class="categoriefilm"> 3D : ✔️ </span></td>
                                         <?php     } ?>

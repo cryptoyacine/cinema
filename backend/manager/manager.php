@@ -148,7 +148,7 @@ $_SESSION["prixpayer"] = $prixfin;
 
 header("Location: ../../index.php");
 }
-
+$_SESSION["connect"] ="4";
 }
 
 
