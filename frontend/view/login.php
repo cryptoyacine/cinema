@@ -12,6 +12,8 @@ if (isset($_SESSION['id'])) {
 
 else{
 
+
+
 ?>
   <?php include '../include_frontends/nav.php';  ?>
 <section class="login py-5 border-top-1">

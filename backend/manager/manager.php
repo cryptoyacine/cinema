@@ -56,7 +56,7 @@ $_SESSION['role'] = $res["role"];
 $_SESSION['username'] = $res["username"];
 
 
-
+  $_SESSION['connect'] ="1";
 
 }
 
@@ -69,6 +69,7 @@ throw new Exception("toutecasevide",1);
 
 
 }
+
 header("Location: ../../index.php");
 
 }
@@ -179,7 +180,7 @@ $req->execute(array(
 
 $c = $this->mail($a);
 
-
+  $_SESSION['connect'] ="2";
 
 
 }
