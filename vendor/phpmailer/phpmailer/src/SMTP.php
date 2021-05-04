@@ -268,7 +268,7 @@ class SMTP
 
           return;
       }
-    
+
   }
 
   /**
