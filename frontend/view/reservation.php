@@ -3,7 +3,10 @@
 <head>
     <!-- Demarrage session -->
     <?php include '../include_frontends/nav.php';  if (isset($_SESSION["id"]) ) {   if (isset($_SESSION['stop']) and  $_SESSION['stop'] ==6 ) {
-    $res=$_SESSION["reservation"];
+      if (isset($_SESSION["reservation"])) {
+        $res=$_SESSION["reservation"];
+      }
+
     }
 
       else {
