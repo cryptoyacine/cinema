@@ -36,14 +36,14 @@
                     foreach ($res as $value) {
 
 
-                      echo "<option value=".$value['salleid'].">" ." Film disponible => ".$value["SALLENomfilm"] ."   =====> la salle du film  :  ".  $value["salleid"] ."  =====> place restante   : ". $value["salleplace"] ."  </option>";
+                      echo "<option value=".$value['salleid'].">" ." Film disponible => ".$value["SALLENomfilm"] ."   =====> la salle du film  :  ".  $value["salleid"] ."   </option>";
                     }
 
                     ?>
 
                   </select>
 
-                  <?php var_dump($_SESSION["reserv"]) ?>
+              
 
                   <section class="login py-5 border-top-1"/>
 

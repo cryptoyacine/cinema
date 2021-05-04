@@ -43,7 +43,7 @@ $req->execute(array(
 'username'=> $a->getUsername(),
 'password'=> $a->getPassword()
 ));                                          //VOIR SI UN UTILISATEUR EXISTE ET LE CONNECTER
-var_dump($a);
+
 $res = $req->fetch();
 
 
@@ -70,7 +70,7 @@ throw new Exception("toutecasevide",1);
 
 }
 
-header("Location: ../../index.php");
+
 
 }
 

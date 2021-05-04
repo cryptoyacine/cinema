@@ -38,7 +38,7 @@ if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] !='') {
 else {
 
 
-  //header("Location: ../../index.php");
+  header("Location: ../../index.php");
 }
 
 
