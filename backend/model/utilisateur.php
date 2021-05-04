@@ -3,86 +3,103 @@
 require_once 'contact.php';
 class utilisateur extends contact{
 
-  public $id,$nom,$prenom,$password, $passwordmodifconf,$passwordmodif,$passwordconf,$role,$username,$typemodif,$mail,$mailmodif,$idmodif,$idadminmodif,$nomadminmodif,$prenomadminmodif,$livnom,$passwordadminmodif,$mailadminmodif,$roleadminmodif,$livaut,$cdaut,$cdnomrecherche,$filmaut,$refcd,$refliv,$reffilm,$filmnom,$cdnom,$livrenom,$cdth,$filmth,$livreth;
+  public $id,$nom,$salleidmodif,$prenom,$password, $passwordmodifconf,$passwordmodif,$passwordconf,$role,$username,$typemodif,$mail,$mailmodif,$idmodif,$idadminmodif,$nomadminmodif,$prenomadminmodif,$passwordadminmodif,$mailadminmodif,$roleadminmodif,$salleplace,$description,$sallenomfilm,$theme,$troisd,$salleid,$image,$tarif,$cb,$place,$prix;
 
-// constructeur
+  // constructeur
 
   public function __construct(array $donnees)
   {
 
-     $this->hydrate($donnees);
+    $this->hydrate($donnees);
 
   }
 
 
-//Fonction Hydrate
+  //Fonction Hydrate
 
   public function hydrate(array $donnes)
   {
     foreach ($donnes as $key => $value){
       $method = 'set'.ucfirst($key);
 
-    if (method_exists($this, $method)){
-      // On appelle le setter.
-      $this->$method($value);
+      if (method_exists($this, $method)){
+        // On appelle le setter.
+        $this->$method($value);
+      }
     }
   }
-}
 
 
 
 
-// LISTE DES GETTERS
+  // LISTE DES GETTERS
 
-public function getId()
-{
-  return $this-> id;
-}
-public function getIdmodif()
-{
-  return $this-> idmodif;
-}
-
-
-public function getIdadminmodif()
-{
-  return $this-> idadminmodif;
-}
-
-public function getNom()
-{
-  return $this-> nom;
-}
-
-public function getNomadminmodif()
-{
-  return $this-> nomadminmodif;
-}
-
-public function getPrenom()
-{
-  return $this-> prenom;
-}
-
-public function getPrenomadminmodif()
-{
-  return $this-> prenomadminmodif;
-}
-
-public function getPassword()
-{
-  return $this-> password;
-}
+  public function getId()
+  {
+    return $this-> id;
+  }
+  public function getIdmodif()
+  {
+    return $this-> idmodif;
+  }
+  public function getSalleidmodif()
+  {
+    return $this-> salleidmodif;
+  }
 
 
-public function getPasswordadminmodif()
-{
-  return $this-> passwordadminmodif;
-}
+  public function getIdadminmodif()
+  {
+    return $this-> idadminmodif;
+  }
+
+  public function getImage()
+  {
+    return $this-> image;
+  }
+
+
+  public function getNom()
+  {
+    return $this-> nom;
+  }
+
+  public function getNomadminmodif()
+  {
+    return $this-> nomadminmodif;
+  }
+
+  public function getPrenom()
+  {
+    return $this-> prenom;
+  }
+  public function getPrix()
+  {
+    return $this-> prix;
+  }
+  public function getPrenomadminmodif()
+  {
+    return $this-> prenomadminmodif;
+  }
+
+  public function getPassword()
+  {
+    return $this-> password;
+  }
+
+
+  public function getPasswordadminmodif()
+  {
+    return $this-> passwordadminmodif;
+  }
 
   public function getPasswordconf()
   {
     return $this-> passwordconf;
+  }
+  public function getSalleid()
+  {
+    return $this-> salleid;
   }
 
   public function getPasswordmodifconf()
@@ -137,352 +154,393 @@ public function getPasswordadminmodif()
     return $this-> typemodif;
   }
 
-  public function getRefcd()
+  public function getDescription()
   {
-    return $this-> refcd;
-  }
-
-  public function getReffilm()
-  {
-    return $this-> reffilm;
-  }
-
-  public function getReflivre()
-  {
-    return $this-> reflivre;
-  }
-
-  public function getLivnom()
-  {
-    return $this-> livnom;
-  }
-
-  public function getCdnom()
-  {
-    return $this-> cdnom;
-  }
-
-  public function getFilmnom()
-  {
-    return $this-> filmnom;
-  }
-
-  public function getFilmaut()
-  {
-    return $this-> filmaut;
-  }
-
-  public function getCdaut()
-  {
-    return $this-> cdaut;
-  }
-
-  public function getCdnomrecherche()
-  {
-    return $this-> cdnomrecherche;
-  }
-
-  public function getLivaut()
-  {
-    return $this-> livaut;
-  }
-
-  public function getLivth()
-  {
-    return $this-> livth;
-  }
-
-  public function getCdth()
-  {
-    return $this-> cdth;
-  }
-
-  public function getFilmth()
-  {
-    return $this-> filmth;
+    return $this-> description;
   }
 
 
-
-// LISTE DES SETTERS
-
-public function setId($id)
-{
-  // On convertit l'argument en nombre entier.
-  // Si c'en était déjà un, rien ne changera.
-  // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
-  $id = (int) $id;
-
-  // On vérifie ensuite si ce nombre est bien strictement positif.
-  if ($id > 0)
-  {
-    // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
-    $this-> id = $id;
-  }
-}
-
-public function setIdadminmodif($idadminmodif)
-{
-  // On convertit l'argument en nombre entier.
-  // Si c'en était déjà un, rien ne changera.
-  // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
-  $idadminmodif = (int) $idadminmodif;
-
-  // On vérifie ensuite si ce nombre est bien strictement positif.
-  if ($idadminmodif > 0)
-  {
-    // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
-    $this-> idadminmodif = $idadminmodif;
-  }
-}
-
-public function setIdmodif($idmodif)
-{
-  // On convertit l'argument en nombre entier.
-  // Si c'en était déjà un, rien ne changera.
-  // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
-  $idmodif = (int) $idmodif;
-
-  // On vérifie ensuite si ce nombre est bien strictement positif.
-  if ($idmodif > 0)
-  {
-    // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
-    $this-> idmodif = $idmodif;
-  }
-}
-
-public function setNom($nom)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($nom))
-  {
-    $this-> nom = $nom;
-  }
-}
-
-public function setPrenom($prenom)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($prenom))
-  {
-    $this-> prenom = $prenom;
-  }}
-
-
-  public function setPassword($password)
-  {
-    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-    if (is_string($password))
+    public function getTroisd()
     {
-      $this-> password = $password;
+      return $this-> troisd;
     }
-}
 
-public function setPasswordmodif($passwordmodif)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($passwordmodif))
+
+
+
+  public function getSallenomfilm()
   {
-    $this-> passwordmodif = $passwordmodif;
+    return $this-> sallenomfilm;
   }
-}
 
-public function setPasswordmodifconf($passwordmodifconf)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($passwordmodifconf))
+  public function getSalleplace()
   {
-    $this-> passwordmodifconf = $passwordmodifconf;
+    return $this-> salleplace;
   }
-}
 
 
-
-
-public function setNomadminmodif($nomadminmodif)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($nomadminmodif))
+  public function getTheme()
   {
-    $this-> nomadminmodif = $nomadminmodif;
+    return $this-> theme;
   }
-}
-
-public function setPrenomadminmodif($prenomadminmodif)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($prenomadminmodif))
+  public function getTarif()
   {
-    $this-> prenomadminmodif = $prenomadminmodif;
-  }}
+    return $this-> tarif;
+  }
 
-
-  public function setPasswordadminmodif($passwordadminmodif)
+  public function getCb()
   {
-    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-    if (is_string($passwordadminmodif))
+    return $this-> cb;
+  }
+
+  public function getPlace()
+  {
+    return $this-> place;
+  }
+
+
+  // LISTE DES SETTERS
+
+  public function setId($id)
+  {
+    // On convertit l'argument en nombre entier.
+    // Si c'en était déjà un, rien ne changera.
+    // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+    $id = (int) $id;
+
+    // On vérifie ensuite si ce nombre est bien strictement positif.
+    if ($id > 0)
     {
-      $this-> passwordadminmodif = $passwordadminmodif;
+      // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+      $this-> id = $id;
     }
-}
+  }
 
-public function setUsernameadminmodif($usernameadminmodif)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($usernameadminmodif))
+  public function setIdadminmodif($idadminmodif)
   {
-    $this-> usernameadminmodif = $usernameadminmodif;
-  }}
+    // On convertit l'argument en nombre entier.
+    // Si c'en était déjà un, rien ne changera.
+    // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+    $idadminmodif = (int) $idadminmodif;
 
-  public function setRoleadminmodif($roleadminmodif)
+    // On vérifie ensuite si ce nombre est bien strictement positif.
+    if ($idadminmodif > 0)
+    {
+      // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+      $this-> idadminmodif = $idadminmodif;
+    }
+  }
+
+  public function setIdmodif($idmodif)
+  {
+    // On convertit l'argument en nombre entier.
+    // Si c'en était déjà un, rien ne changera.
+    // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+    $idmodif = (int) $idmodif;
+
+    // On vérifie ensuite si ce nombre est bien strictement positif.
+    if ($idmodif > 0)
+    {
+      // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+      $this-> idmodif = $idmodif;
+    }
+  }
+  public function setSalleidmodif($salleidmodif)
+  {
+    // On convertit l'argument en nombre entier.
+    // Si c'en était déjà un, rien ne changera.
+    // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+    $salleidmodif = (int) $salleidmodif;
+
+    // On vérifie ensuite si ce nombre est bien strictement positif.
+    if ($salleidmodif > 0)
+    {
+      // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+      $this-> salleidmodif = $salleidmodif;
+    }
+  }
+
+  public function setNom($nom)
   {
     // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-    if (is_string($roleadminmodif))
+    if (is_string($nom))
     {
-      $this-> roleadminmodif = $roleadminmodif;
+      $this-> nom = $nom;
+    }
+  }
+  public function setDescription($description)
+  {
+    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+    if (is_string($description))
+    {
+      $this-> description = $description;
+    }
+  }
+
+  public function setPrenom($prenom)
+  {
+    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+    if (is_string($prenom))
+    {
+      $this-> prenom = $prenom;
     }}
 
-    public function setMailadminmodif($mailadminmodif)
+
+    public function setPassword($password)
     {
       // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-      if (is_string($mailadminmodif))
+      if (is_string($password))
       {
-        $this-> mailadminmodif = $mailadminmodif;
+        $this-> password = $password;
+      }
+    }
+
+    public function setImage($image)
+    {
+      // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+      if (is_string($image))
+      {
+        $this-> image = $image;
+      }
+    }
+    public function setSalleid($salleid)
+    {
+      // On convertit l'argument en nombre entier.
+      // Si c'en était déjà un, rien ne changera.
+      // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+      $salleid = (int) $salleid;
+
+      // On vérifie ensuite si ce nombre est bien strictement positif.
+      if ($salleid > 0)
+      {
+        // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+        $this-> salleid = $salleid;
+      }
+    }
+
+
+    public function setPasswordmodif($passwordmodif)
+    {
+      // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+      if (is_string($passwordmodif))
+      {
+        $this-> passwordmodif = $passwordmodif;
+      }
+    }
+
+    public function setPasswordmodifconf($passwordmodifconf)
+    {
+      // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+      if (is_string($passwordmodifconf))
+      {
+        $this-> passwordmodifconf = $passwordmodifconf;
+      }
+    }
+
+
+
+
+    public function setNomadminmodif($nomadminmodif)
+    {
+      // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+      if (is_string($nomadminmodif))
+      {
+        $this-> nomadminmodif = $nomadminmodif;
+      }
+    }
+
+    public function setPrenomadminmodif($prenomadminmodif)
+    {
+      // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+      if (is_string($prenomadminmodif))
+      {
+        $this-> prenomadminmodif = $prenomadminmodif;
       }}
 
 
-public function setPasswordconf($passwordconf)
-{
-  // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($passwordconf))
-  {
-    $this-> passwordconf = $passwordconf;
-  }
-}
-    public function setUsername($username)
-    {
-      // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-      if (is_string($username))
-      {
-        $this-> username = $username;
-      }}
-
-      public function setRole($role)
+      public function setPasswordadminmodif($passwordadminmodif)
       {
         // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        if (is_string($role))
+        if (is_string($passwordadminmodif))
         {
-          $this-> role = $role;
+          $this-> passwordadminmodif = $passwordadminmodif;
+        }
+      }
+
+      public function setUsernameadminmodif($usernameadminmodif)
+      {
+        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+        if (is_string($usernameadminmodif))
+        {
+          $this-> usernameadminmodif = $usernameadminmodif;
         }}
-        public function setTypemodif($typemodif)
+
+        public function setRoleadminmodif($roleadminmodif)
         {
           // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-          if (is_string($typemodif))
+          if (is_string($roleadminmodif))
           {
-            $this-> typemodif = $typemodif;
+            $this-> roleadminmodif = $roleadminmodif;
           }}
 
-          public function setMail($mail)
+          public function setMailadminmodif($mailadminmodif)
           {
             // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-            if (is_string($mail))
+            if (is_string($mailadminmodif))
             {
-              $this-> mail = $mail;
+              $this-> mailadminmodif = $mailadminmodif;
             }}
 
-            public function setMailmodif($mailmodif)
+
+            public function setPasswordconf($passwordconf)
             {
               // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-              if (is_string($mailmodif))
+              if (is_string($passwordconf))
               {
-                $this-> mailmodif = $mailmodif;
+                $this-> passwordconf = $passwordconf;
+              }
+            }
+            public function setUsername($username)
+            {
+              // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+              if (is_string($username))
+              {
+                $this-> username = $username;
               }}
 
-              public function setLivaut($livaut)
+              public function setRole($role)
               {
                 // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                if (is_string($livaut))
+                if (is_string($role))
                 {
-                  $this-> livaut = $livaut;
+                  $this-> role = $role;
                 }}
-
-                public function setFilmaut($filmaut)
+                public function setTypemodif($typemodif)
                 {
                   // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                  if (is_string($filmaut))
+                  if (is_string($typemodif))
                   {
-                    $this-> filmaut = $filmaut;
+                    $this-> typemodif = $typemodif;
                   }}
 
-                  public function setCdaut($cdaut)
+                  public function setMail($mail)
                   {
                     // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                    if (is_string($cdaut))
+                    if (is_string($mail))
                     {
-                      $this-> cdaut = $cdaut;
+                      $this-> mail = $mail;
                     }}
 
-                    public function setCdth($cdth)
+                    public function setMailmodif($mailmodif)
                     {
                       // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                      if (is_string($cdth))
+                      if (is_string($mailmodif))
                       {
-                        $this-> cdth = $cdth;
+                        $this-> mailmodif = $mailmodif;
                       }}
 
-                      public function setFilmth($filmth)
+                      public function setSalleplace($salleplace)
                       {
-                        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                        if (is_string($filmth))
-                        {
-                          $this-> filmth = $filmth;
-                        }}
+                        // On convertit l'argument en nombre entier.
+                        // Si c'en était déjà un, rien ne changera.
+                        // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                        $salleplace = (int) $salleplace;
 
-                        public function setLivth($livth)
+                        // On vérifie ensuite si ce nombre est bien strictement positif.
+                        if ($salleplace > 0)
+                        {
+                          // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                          $this-> salleplace = $salleplace;
+                        }
+                        }
+
+
+                        public function setTheme($theme)
                         {
                           // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                          if (is_string($livth))
+                          if (is_string($theme))
                           {
-                            $this-> livth = $livth;
+                            $this-> theme = $theme;
                           }}
 
-                          public function setLivnom($livnom)
+
+                          public function setSallenomfilm($sallenomfilm)
                           {
                             // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                            if (is_string($livnom))
+                            if (is_string($sallenomfilm))
                             {
-                              $this-> livnom = $livnom;
+                              $this-> sallenomfilm = $sallenomfilm;
                             }}
 
-                            public function setCdnom($cdnom)
+                            public function setTarif($tarif)
                             {
                               // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                              if (is_string($cdnom))
+                              if (is_string($tarif))
                               {
-                                $this-> cdnom = $cdnom;
+                                $this-> tarif = $tarif;
                               }}
 
-                              public function setCdnomrecherche($cdnomrecherche)
+                            public function setTroisd($troisd)
+                            {
+                              // On convertit l'argument en nombre entier.
+                              // Si c'en était déjà un, rien ne changera.
+                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                              $troisd = (int) $troisd;
+
+                              // On vérifie ensuite si ce nombre est bien strictement positif.
+                              if ($troisd > 0)
                               {
-                                // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                                if (is_string($cdnomrecherche))
-                                {
-                                  $this-> cdnomrecherche = $cdnomrecherche;
-                                }}
+                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                $this-> troisd = $troisd;
+                            }}
 
-                              public function setFilmnom($filmnom)
+
+                            public function setPlace($place)
+                            {
+                              // On convertit l'argument en nombre entier.
+                              // Si c'en était déjà un, rien ne changera.
+                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                              $place = (int) $place;
+
+                              // On vérifie ensuite si ce nombre est bien strictement positif.
+                              if ($place > 0)
                               {
-                                // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                                if (is_string($filmnom))
-                                {
-                                  $this-> filmnom = $filmnom;
-                                }}
+                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                $this-> place = $place;
+                              }
+                            }
 
 
+                            public function setPrix($prix)
+                            {
+                              // On convertit l'argument en nombre entier.
+                              // Si c'en était déjà un, rien ne changera.
+                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                              $prix = (int) $prix;
 
+                              // On vérifie ensuite si ce nombre est bien strictement positif.
+                              if ($prix > 0)
+                              {
+                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                $this-> prix = $prix;
+                              }
+                            }
 
+                            public function setCb($cb)
+                            {
+                              // On convertit l'argument en nombre entier.
+                              // Si c'en était déjà un, rien ne changera.
+                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                              $cb = (int) $cb;
 
+                              // On vérifie ensuite si ce nombre est bien strictement positif.
+                              if ($cb > 0)
+                              {
+                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                $this-> cb = $cb;
+                              }
+                            }
 
-}
+                          }
 
-?>
+                          ?>

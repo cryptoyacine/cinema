@@ -45,9 +45,8 @@
 								<h3 class="tab-title">Description du film</h3>
 								<p>Flash (The Flash) est un film créée par Greg Berlanti, Andrew Kreisberg et Geoff Johns, diffusée en simultané depuis le 7 octobre 20141 sur le réseau The CW aux États-Unis et au Canada sur le réseau CTV2 (ou CTV Two) pour les quatre premières saisons, puis sur Netflix dès la quatrième saison. Elle est basée sur le personnage de DC Comics Flash / Barry Allen, un super-héros créé par Robert Kanigher, John Broome et Carmine Infantino.</p>
 
-								<iframe width="100%" height="400" src="https://fr.wikipedia.org/wiki/Flash_(s%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e,_2014)#/media/Fichier:The_Flash_logo.png"
-								 frameborder="0" allowfullscreen></iframe>
-								<p></p>
+
+
 								<p>En France, le film est diffusé depuis le 8 octobre 2014 en version originale sous-titrée français sur le service de vidéo à la demande MYTF1 VOD3 et depuis le 1er juillet 20154 en version française sur TF1, au Québec, depuis le 26 juin 2015 sur le service de vidéo à la demande Club Illico5 puis dès le 3 mai 2016 sur AddikTV6 et en Belgique, depuis le 22 novembre 2015 sur La Deux7. Elle reste inédite à la télévision suisse.  </p>
 
 							</div>
@@ -172,7 +171,7 @@
 
               <?php if (isset($_SESSION["id"])){   ?>
 						<ul class="list-inline mt-20">
-							<li class="list-inline-item"><a href="" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
+							<li class="list-inline-item"><a href="reservationfilm.php" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
 						</ul>
           <?php }
           else {  ?>

@@ -39,6 +39,7 @@
 								<div class="dropdown-menu">
 
                   <a class="dropdown-item" href="frontend/view/categoriefilm.php"> Film</a>
+									<a class="dropdown-item" href="frontend/view/reservationfilm.php">reservation Film</a>
 
 								</div>
 							</li>

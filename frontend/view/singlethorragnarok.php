@@ -59,7 +59,7 @@ Le troisième volet des aventures de Thor a été annoncé par Kevin Feige en ju
 								<table class="table table-bordered product-table">
 									<tbody>
 										<tr>
-											<td>Seller Price</td>
+												<td>action</td>
 											<td>$450</td>
 										</tr>
 										<tr>
@@ -176,7 +176,7 @@ Le troisième volet des aventures de Thor a été annoncé par Kevin Feige en ju
 
               <?php if (isset($_SESSION["id"])){   ?>
 						<ul class="list-inline mt-20">
-							<li class="list-inline-item"><a href="" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
+							<li class="list-inline-item"><a href="reservationfilm.php" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
 						</ul>
           <?php }
           else {  ?>

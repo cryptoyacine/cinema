@@ -6,18 +6,14 @@ require_once '../manager/manager.php';
 
 try {
 
-
-
-
-
-
-
   $user = new utilisateur([
 
-    "filmth" => $_POST["filmth"],
-    "filmaut" => $_POST["filmaut"],               //RENTRER LES VALEURS DANS LES SETTERS
-
-    "filmnom" => $_POST["filmnom"],
+    "SALLENomfilm" => $_POST["sallenomfilm"],
+    "salleplace" => $_POST["salleplace"],               //RENTRER LES VALEURS DANS LES SETTERS
+    "description" => $_POST["description"],
+    "image" => $_POST["image"],
+    "theme" => $_POST["theme"],
+    "troisd" => $_POST["troisd"],
 
     ]);
 
@@ -33,6 +29,7 @@ try {
   $_SESSION["erreurcase"] = $e->getMessage();
 
   if ($_SESSION["erreurcase"] == '') {
+    var_dump($user);
     header("Location: ../../frontend/view/adminajoutfilm.php");
     $_SESSION["erreurcase"] = "reussis";
   }
@@ -40,20 +37,8 @@ try {
 
 
 }
+
 header("Location: ../../frontend/view/adminajoutfilm.php");
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

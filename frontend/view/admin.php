@@ -1,7 +1,7 @@
 <!DOCTYPE PHP>
 <PHP lang="fr">
 <head>
-  <?php include '../include_frontends/nav.php';  ?>
+  <?php session_start();   ?>
     <!-- Demarrage session avec un test pour savoir si on est connecté et si on est admin -->
 <?php
 
@@ -19,7 +19,7 @@ else {
 }
 ?>
 
-
+<?php include '../include_frontends/navh.php'; ?>
 <section class="login py-5 border-top-1">
     <div class="container">
         <div class="row justify-content-center">
@@ -257,7 +257,7 @@ else {
 <?php }?>
 
 
-
+</br> </br></br>
 
 
 

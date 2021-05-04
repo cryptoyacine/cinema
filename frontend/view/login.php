@@ -4,7 +4,7 @@
     <!-- Demarrage session avec un test pour savoir si on est connecté -->
 <?php
 
-
+session_start();
 
 if (isset($_SESSION['id'])) {
   header("Location: 404.php ");
@@ -15,7 +15,7 @@ else{
 
 
 ?>
-  <?php include '../include_frontends/nav.php';  ?>
+  <?php include '../include_frontends/navh.php';  ?>
 <section class="login py-5 border-top-1">
     <div class="container">
         <div class="row justify-content-center">

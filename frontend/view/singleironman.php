@@ -48,7 +48,7 @@
 								<iframe width="100%" height="400" src="https://fr.wikipedia.org/wiki/Iron_Man_(film)#/media/Fichier:Iron_Man_(film)_Logo.png"
 								 frameborder="0" allowfullscreen></iframe>
 								<p></p>
-								
+
 
 							</div>
 							<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -163,7 +163,7 @@
 				<div class="sidebar">
           <div class="widget price text-center">
           						<h4>Salle :</h4>
-          						<p>3</p>
+          						<p> <?php    echo $_SESSION["film"][2][0];?>  </p>
           					</div>
 					<!-- User Profile widget -->
 					<div class="widget user text-center">
@@ -172,7 +172,7 @@
 
               <?php if (isset($_SESSION["id"])){   ?>
 						<ul class="list-inline mt-20">
-							<li class="list-inline-item"><a href="" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
+							<li class="list-inline-item"><a href="reservationfilm.php" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
 						</ul>
           <?php }
           else {  ?>

@@ -172,7 +172,7 @@
 
               <?php if (isset($_SESSION["id"])){   ?>
 						<ul class="list-inline mt-20">
-							<li class="list-inline-item"><a href="" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
+							<li class="list-inline-item"><a href="reservationfilm.php" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Reserver</a></li>
 						</ul>
           <?php }
           else {  ?>

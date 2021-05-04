@@ -74,6 +74,84 @@ header("Location: ../../index.php");
 
 }
 
+public function paiement($a) //AJOUTER UN FILM EN TANT QU'ADMIN
+{
+session_start();
+
+
+
+
+
+
+$this->dbh = new bdd();
+$req = $this->dbh->getBase()->prepare("SELECT * from salle where salleid=:salleid ");
+$req->execute(array(
+  'salleid'=> $_SESSION["salleid"],
+  ));
+
+  $res = $req->fetch();
+
+
+
+  if ( $a->getTarif() =="etudiant") {
+
+  $prixfin = $a->getPrix()*0.90;
+
+
+  }
+
+  else {
+      $prixfin = $a->getPrix();
+
+  }
+
+  if ($res["salleplace"] < $a->getPlace()) {
+    throw new Exception("Error place");
+
+  }
+
+
+else {
+
+
+
+
+$this->dbh = new bdd();
+$req = $this->dbh->getBase()->prepare("INSERT INTO reservation (RESnombre,idsalle, REStarif, utilisateurid) VALUES (:place, :salleid,:tarif,:id)");
+$req->execute(array(
+'place' => $a->getPlace(),
+'salleid' => $_SESSION["salleid"],
+'tarif' => $prixfin,
+'id' => $_SESSION["id"],
+
+
+
+));
+
+
+$salleplacee =  $_SESSION["salleplace"] - $a->getPlace()  ;
+
+
+
+$reez = $this->dbh->getBase()->prepare("UPDATE salle set salleplace = :salleplace where salleid = :salleid ");
+$reez->execute(array(
+'salleid' => $_SESSION["salleid"],
+'salleplace' => $salleplacee,
+
+));
+
+
+
+
+$_SESSION["connect"] ="4";
+$_SESSION["prixpayer"] = $prixfin;
+
+header("Location: ../../index.php");
+}
+
+}
+
+
 public function deconnexion()
 {
 session_start();
@@ -501,6 +579,9 @@ throw new Exception("Erreur",1);
 
 }}
 
+
+
+
 public function selectadmin($a){ //POUR AFFICHER LES UTILISATEURS POUR LES MODIFIER EN TANT QU'ADMIN
 session_start();
 $_SESSION['ok'] = 1;
@@ -541,6 +622,48 @@ throw new Exception("Erreur dans select admin",1);
 
 }}
 
+public function selectfilm($a){ //POUR AFFICHER LES UTILISATEURS POUR LES MODIFIER EN TANT QU'ADMIN
+session_start();
+$_SESSION['ok'] = 1;
+$this->dbh = new bdd();
+
+
+$req = $this->dbh->getBase()->prepare("SELECT * from salle where salleid = :salleid");
+$req->execute(array(
+'salleid' => $a->getSalleidmodif(),
+
+));
+
+$res = $req->fetch();
+
+
+if ($res) {
+
+$_SESSION['reserv'] = $res["salleid"];
+$_SESSION['salleid'] = $res["salleid"];
+$_SESSION['SALLENomfilm'] = $res["SALLENomfilm"];
+$_SESSION['3D'] = $res["3D"];
+$_SESSION["description"] = $res["description"];
+$_SESSION["image"] = $res["image"];
+$_SESSION["lienfilm"] = $res["lienfilm"];
+$_SESSION['salleplace'] = $res["salleplace"];
+
+
+
+
+
+}
+
+else {
+
+throw new Exception("Erreur dans select film",1);
+
+
+var_dump( $a->getSalleidmodif());
+
+
+
+}}
 
 
 
@@ -1036,43 +1159,43 @@ throw new Exception("Erreur",1);
 
 
 public function adminajoutfilm($a) //AJOUTER UN FILM EN TANT QU'ADMIN
-{
-session_start();
+              {
+                session_start();
 
 
+                $this->dbh = new bdd();
+                $req = $this->dbh->getBase()->prepare("SELECT * from salle where sallenomfilm=:sallenomfilm ");
+                $req->execute(array(
+                  'sallenomfilm'=> $a->getSallenomfilm(),
+                ));
+
+                $res = $req->fetch();
+
+                if ($res) {
+                  throw new Exception("Error film deja existant");
+
+                }
 
 
+                else {
+                  $this->dbh = new bdd();
+                  $req = $this->dbh->getBase()->prepare("INSERT INTO salle (sallenomfilm,salleplace,3D,description,image,theme) values (:sallenomfilm,:salleplace,:troisd,:description,:image,:theme)");
+                  $req->execute(array(
+                    'sallenomfilm' => $a->getSallenomfilm(),
+                    'salleplace' => $a->getSalleplace(),
+                    'troisd' => $a->getTroisd(),
+                    'description' => $a->getDescription(),
+                    'image' => $a->getImage(),
+                    'theme' => $a->getTheme(),
+                  ));
+
+$_SESSION["connect"] ="3";
 
 
-$this->dbh = new bdd();
-$req = $this->dbh->getBase()->prepare("SELECT * from film where filmnom=:filmnom ");
-$req->execute(array(
-  'filmnom'=> $a->getFilmnom(),
-  ));
+                }
 
-  $res = $req->fetch();
+              }
 
-  if ($res) {
-    throw new Exception("Error film deja existant");
-
-  }
-
-
-else {
-$this->dbh = new bdd();
-$req = $this->dbh->getBase()->prepare("INSERT INTO Film (Filmnom,Filmaut,Filmth) values (:Filmnom,:Filmaut,:Filmth)");
-$req->execute(array(
-'Filmnom' => $a->getFilmnom(),
-'Filmaut' => $a->getFilmaut(),
-'Filmth' => $a->getFilmth(),
-));
-
-
-
-
-}
-
-}
 
 
 
