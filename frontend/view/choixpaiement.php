@@ -3,7 +3,7 @@
   <head>
     <?php include '../include_frontends/nav.php';  ?>
     <?php
-    if (isset($_SESSION['role'])){
+    if (isset($_SESSION['role'])){  // Permet de verifier si on est connecté
 
       ?>
       <section class="login py-5 border-top-1">
@@ -37,8 +37,8 @@
                         <br>
                         <input  type="radio" name="tarif" class="form-controlred p-1 w-3 my-1" value="etudiant"
                         checked/>
-                          <br>
-aucun tarif :
+                        <br>
+                        aucun tarif :
                         <br>
                         <input type="radio" name="tarif" class="form-controlred p-1 w-3 my-1" value="rien"
                         />
@@ -49,14 +49,14 @@ aucun tarif :
 
                       <script type="text/javascript">
                       function calcul(){
-                                      var prix = Number(document.getElementById("heuresI").value);
+                        var prix = Number(document.getElementById("heuresI").value);
 
-                                      var quantite = 7;
+                        var quantite = 7;
 
 
-                                      var ttc = Number(prix * quantite);
-                                      document.getElementById("ttc").value = ttc;
-                                  }
+                        var ttc = Number(prix * quantite);
+                        document.getElementById("ttc").value = ttc;
+                      }
 
                       </script>
 
@@ -67,15 +67,15 @@ aucun tarif :
 
 
 
-                      	<br>	<label>Prix total :</label><input type="text" SIZE="33" STYLE="text-decoration:none;;color: black;" name="prix" id="ttc">  (sans réduction)<br/><br/>
+                      <br>	<label>Prix total :</label><input type="text" SIZE="33" STYLE="text-decoration:none;;color: black;" name="prix" id="ttc">  (sans réduction)<br/><br/>
 
 
                       <label>Mode de paiment :</label><select name="mode">
-                      		<option value="cb"> carte bancaire</option>
-                      			</select><br/><br/>
+                        <option value="cb"> carte bancaire</option>
+                      </select><br/><br/>
 
 
-                      <input type="text" name="cb"
+                      <input type="number" name="cb"
                       <?php
 
 
@@ -90,30 +90,30 @@ aucun tarif :
 
 
 
-                    <div class="loggedin-forgot d-inline-flex my-3">
-                      <label for="registering" class="px-2">En vous inscrivant vous acceptez nos <a class="text-primary font-weight-bold" href="terms-condition.PHP">termes et conditions et politique de confidentialité</a></label>
-                    </div>
-                    <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Payer</button>
-                  </fieldset>
-                </form>
+                      <div class="loggedin-forgot d-inline-flex my-3">
+                        <label for="registering" class="px-2">En vous inscrivant vous acceptez nos <a class="text-primary font-weight-bold" href="terms-condition.PHP">termes et conditions et politique de confidentialité</a></label>
+                      </div>
+                      <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Payer</button>
+                    </fieldset>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+        <!--============================
+        =            Footer            =
+        =============================-->
+        <?php include('../include_frontends/footers.php'); ?>
+        <!-- Container End -->
+        <!-- To Top -->
+        <div class="top-to">
+          <a id="top" class="" href="#"><i class="fa fa-angle-up"></i></a>
         </div>
-      </section>
-      <!--============================
-      =            Footer            =
-      =============================-->
-      <?php include('../include_frontends/footers.php'); ?>
-      <!-- Container End -->
-      <!-- To Top -->
-      <div class="top-to">
-        <a id="top" class="" href="#"><i class="fa fa-angle-up"></i></a>
-      </div>
-    </footer>
+      </footer>
 
-    <?php include('../include_frontends/plugins.php'); ?>
-  </body>
-  <?php $_SESSION["erreurcase"] = ''; } ?>
+      <?php include('../include_frontends/plugins.php'); ?>
+    </body>
+    <?php $_SESSION["erreurcase"] = ''; } ?>
 
-</PHP>
+  </PHP>

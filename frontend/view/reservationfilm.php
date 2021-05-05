@@ -4,17 +4,9 @@
 
     <?php session_start(); include '../include_frontends/navh.php';  ?>
     <!-- Demarrage session avec un test pour savoir si on est connecté et si on est admin -->
-    <?php
 
 
 
-
-
-
-
-    ?>
-
-    <
 
     <section class="login py-5 border-top-1">
       <div class="container">
@@ -43,7 +35,7 @@
 
                   </select>
 
-              
+
 
                   <section class="login py-5 border-top-1"/>
 

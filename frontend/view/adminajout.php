@@ -1,5 +1,7 @@
 <!DOCTYPE PHP>
 <PHP lang="fr">
+
+      <!-- Demarrage session avec un test pour savoir si on est connecté et si on est admin -->
     <?php include '../include_frontends/nav.php';  ?>
     <?php
   if (isset($_SESSION['role']) and $_SESSION['role'] == 1 ){
@@ -21,7 +23,7 @@
 
                               <input type="text" name="nom"
                               <?php
-
+                    //permet de gerer les erreurs
                               if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevide"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
                                 if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevidesaufpassword"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}
                                 if (isset($_SESSION["erreurcase"]) and $_SESSION["erreurcase"] == "toutecasevidesaufprenom"){ echo'placeholder="Veuillez rentrer un nom valide*"';  echo 'class="form-controlred p-3 w-100 my-2"' ;}

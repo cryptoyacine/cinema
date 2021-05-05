@@ -11,7 +11,7 @@ class utilisateur extends contact{
   {
 
     $this->hydrate($donnees);
-
+    
   }
 
 
@@ -160,10 +160,10 @@ class utilisateur extends contact{
   }
 
 
-    public function getTroisd()
-    {
-      return $this-> troisd;
-    }
+  public function getTroisd()
+  {
+    return $this-> troisd;
+  }
 
 
 
@@ -452,33 +452,33 @@ class utilisateur extends contact{
                           // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
                           $this-> salleplace = $salleplace;
                         }
-                        }
+                      }
 
 
-                        public function setTheme($theme)
+                      public function setTheme($theme)
+                      {
+                        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+                        if (is_string($theme))
+                        {
+                          $this-> theme = $theme;
+                        }}
+
+
+                        public function setSallenomfilm($sallenomfilm)
                         {
                           // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                          if (is_string($theme))
+                          if (is_string($sallenomfilm))
                           {
-                            $this-> theme = $theme;
+                            $this-> sallenomfilm = $sallenomfilm;
                           }}
 
-
-                          public function setSallenomfilm($sallenomfilm)
+                          public function setTarif($tarif)
                           {
                             // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                            if (is_string($sallenomfilm))
+                            if (is_string($tarif))
                             {
-                              $this-> sallenomfilm = $sallenomfilm;
+                              $this-> tarif = $tarif;
                             }}
-
-                            public function setTarif($tarif)
-                            {
-                              // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-                              if (is_string($tarif))
-                              {
-                                $this-> tarif = $tarif;
-                              }}
 
                             public function setTroisd($troisd)
                             {
@@ -492,55 +492,55 @@ class utilisateur extends contact{
                               {
                                 // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
                                 $this-> troisd = $troisd;
-                            }}
+                              }}
 
 
-                            public function setPlace($place)
-                            {
-                              // On convertit l'argument en nombre entier.
-                              // Si c'en était déjà un, rien ne changera.
-                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
-                              $place = (int) $place;
-
-                              // On vérifie ensuite si ce nombre est bien strictement positif.
-                              if ($place > 0)
+                              public function setPlace($place)
                               {
-                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
-                                $this-> place = $place;
+                                // On convertit l'argument en nombre entier.
+                                // Si c'en était déjà un, rien ne changera.
+                                // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                                $place = (int) $place;
+
+                                // On vérifie ensuite si ce nombre est bien strictement positif.
+                                if ($place > 0)
+                                {
+                                  // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                  $this-> place = $place;
+                                }
                               }
+
+
+                              public function setPrix($prix)
+                              {
+                                // On convertit l'argument en nombre entier.
+                                // Si c'en était déjà un, rien ne changera.
+                                // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                                $prix = (int) $prix;
+
+                                // On vérifie ensuite si ce nombre est bien strictement positif.
+                                if ($prix > 0)
+                                {
+                                  // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                  $this-> prix = $prix;
+                                }
+                              }
+
+                              public function setCb($cb)
+                              {
+                                // On convertit l'argument en nombre entier.
+                                // Si c'en était déjà un, rien ne changera.
+                                // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
+                                $cb = (int) $cb;
+
+                                // On vérifie ensuite si ce nombre est bien strictement positif.
+                                if ($cb > 0)
+                                {
+                                  // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
+                                  $this-> cb = $cb;
+                                }
+                              }
+
                             }
 
-
-                            public function setPrix($prix)
-                            {
-                              // On convertit l'argument en nombre entier.
-                              // Si c'en était déjà un, rien ne changera.
-                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
-                              $prix = (int) $prix;
-
-                              // On vérifie ensuite si ce nombre est bien strictement positif.
-                              if ($prix > 0)
-                              {
-                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
-                                $this-> prix = $prix;
-                              }
-                            }
-
-                            public function setCb($cb)
-                            {
-                              // On convertit l'argument en nombre entier.
-                              // Si c'en était déjà un, rien ne changera.
-                              // Sinon, la conversion donnera le nombre 0 (à quelques exceptions près, mais rien d'important ici).
-                              $cb = (int) $cb;
-
-                              // On vérifie ensuite si ce nombre est bien strictement positif.
-                              if ($cb > 0)
-                              {
-                                // Si c'est le cas, c'est tout bon, on assigne la valeur à l'attribut correspondant.
-                                $this-> cb = $cb;
-                              }
-                            }
-
-                          }
-
-                          ?>
+                            ?>
