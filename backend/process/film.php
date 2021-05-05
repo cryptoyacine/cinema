@@ -13,7 +13,7 @@ try {
 
   $ad = new manager();
 
-  $ad->film();                                  // INSTANCIER METHOD ADMIN
+  $ad->film();                                  // INSTANCIER METHOD FILM 
 
 
 } catch (Exception $e) {

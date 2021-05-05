@@ -20,7 +20,7 @@ $user = new utilisateur([
 
   $man = new manager();
 
-$man->selectfilm($user);
+$man->selectfilm($user); // instancie la method qui permet de selectionner le film a reserver
 
 
 

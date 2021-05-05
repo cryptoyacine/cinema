@@ -27,7 +27,7 @@ try {
     $man = new manager();
 
 
-    $man->paiement($user);      //UTILISE LA METHOD AJOUT FILM QUI AJOUTE UN FILM
+    $man->paiement($user);      //UTILISE LA METHOD FINALISE LA RESERVATON DONC LE PAIEMENT
 
 
 } catch (Exception $e) {
