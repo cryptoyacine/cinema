@@ -82,14 +82,14 @@
                                   </div>
                                   <div class="modal-body text-center">
                                     <img src="images/account/Account1.png" class="img-fluid mb-2" alt="">
-                                    <h6 class="py-2" color="red">Erreur durant la reservation ou le paiement !! <br> </h6>
+                                    <h6 class="py-2 danger" color="">Erreur durant la reservation ou le paiement !! <br> </h6>
 
 
 
                                   </div>
                                   <div class="modal-footer border-top-0 mb-2 mx-4 justify-content-center">
 
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer le pop-up</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer le pop-up</button>
 
                                   </div>
                                 </div>
