@@ -39,15 +39,15 @@
 						<h2>Catégories Populaires</h2>
 						<ul class="list-inline">
 							<li class="list-inline-item">
-								<a href="#"><i class="fa fa-wheelchair-alt"></i> Action</a></li>
+								<a href="frontend/view/categoriefilm.PHP"><i class="fa fa-wheelchair-alt"></i> Action</a></li>
 							<li class="list-inline-item">
-								<a href="#"><i class="fa fa-compass"></i> Aventure</a>
+								<a href="frontend/view/categoriefilm.PHP"><i class="fa fa-compass"></i> Aventure</a>
 							</li>
 							<li class="list-inline-item">
-								<a href="#"><i class="fa fa-map-pin"></i> Mystère</a>
+								<a href="frontend/view/categoriefilm.PHP"><i class="fa fa-map-pin"></i> Mystère</a>
 							</li>
 							<li class="list-inline-item">
-								<a href="#"><i class="fa fa-frown-o"></i> Drama</a>
+								<a href="frontend/view/categoriefilm.PHP"><i class="fa fa-frown-o"></i> Drama</a>
 							</li>
 						</ul>
 					</div>
