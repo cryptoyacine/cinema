@@ -39,8 +39,8 @@ try {
   }
 
   else {
-    $_SESSION["erreurcase"] = "erreur";
-    //header("Location: ../../frontend/view/choixpaiement.php");
+    $_SESSION["connect"] = "erreur";
+    header("Location: ../../frontend/view/choixpaiement.php");
 
 
   }

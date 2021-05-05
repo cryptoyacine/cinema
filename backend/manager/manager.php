@@ -105,10 +105,13 @@ class manager{
 
     }
 
-    if ($res["salleplace"] < $a->getPlace()) {
+    if ($res["salleplace"] < $a->getPlace() or $a->getPlace() <= 0  or $a->getCb() =="") {
       throw new Exception("Error place");
+      $_SESSION["connect"] ="erreur";
+      header("Location: ../../frontend/view/choixpaiement.php");
 
     }
+
 
 
     else {

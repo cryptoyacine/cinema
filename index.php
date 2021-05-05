@@ -157,6 +157,47 @@ $( document ).ready(function() {
 
             <?php $_SESSION["connect"] = "00000"; } ?>
 
+
+
+            <?php if ( isset($_SESSION["connect"]) and $_SESSION["connect"] == "erreur") {
+             ?>
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <script type="text/javascript">
+        $( document ).ready(function() {
+            $('#myModal').modal('toggle')
+        });
+        </script>
+
+
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <img src="images/account/Account1.png" class="img-fluid mb-2" alt="">
+                          <h6 class="py-2" color="red">Erreur durant la reservation ou le paiement !! <br> </h6>
+
+
+
+                        </div>
+                        <div class="modal-footer border-top-0 mb-2 mx-4 justify-content-center">
+
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer le pop-up</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                <?php $_SESSION["connect"] = "00000"; } ?>
+
         <?php if ( isset($_SESSION["connect"]) and $_SESSION["connect"] == "2") {
          ?>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -165,6 +206,8 @@ $( document ).ready(function() {
         $('#myModal').modal('toggle')
     });
     </script>
+
+
 
 
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -218,15 +261,15 @@ $( document ).ready(function() {
 	<div class="card">
 		<div class="thumb-content">
 		<div class="price"><?php echo  $value["salleid"] ;?></div>
-			<a href="<?php echo $value['lienfilm']; ?>">
+			<a href="frontend/view/<?php echo $value['lienfilm']; ?>">
 				<img class="card-img-top img-fluid" src="<?php echo $value['image']; ?>" alt="Card image cap">
 			</a>
 		</div>
 		<div class="card-body">
-		    <h4 class="card-title"><a href="<?php echo $value['lienfilm']; ?>"><?php echo $value["SALLENomfilm"] ;?></a></h4>
+		    <h4 class="card-title"><a href="frontend/view/<?php echo $value['lienfilm']; ?>"><?php echo $value["SALLENomfilm"] ;?></a></h4>
 		    <ul class="list-inline product-meta">
 		    	<li class="list-inline-item">
-		    		<a href="#"><i class="fa fa-folder-open-o"></i><?php echo $value["theme"] ;?></a>
+		    		<i class="fa fa-folder-open-o"></i><?php echo $value["theme"] ;?>
 		    	</li>
 		    	<li class="list-inline-item">
 		    		<a><i class="fa fa-calendar"></i></a>
